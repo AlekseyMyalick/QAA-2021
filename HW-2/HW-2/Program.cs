@@ -18,7 +18,7 @@ namespace HW_2
 
         private static int MaximumNumberOfUnequalConsecutiveCharactersInString(string characterSet)
         {
-            if (string.IsNullOrEmpty(characterSet) || IsIdenticalSymbols(characterSet))
+            if (string.IsNullOrEmpty(characterSet))
             {
                 return 0;
             }
@@ -40,19 +40,6 @@ namespace HW_2
             }
 
             return count > result ? count : result;
-        }
-
-        private static bool IsIdenticalSymbols(string characterSet)
-        {
-            for (int i = 0; i < characterSet.Length - 1; i++)
-            {
-                if (characterSet[i].CompareTo(characterSet[i + 1]) != 0)
-                {
-                    return false;
-                }
-            }
-
-            return true;
         }
     }
 }
