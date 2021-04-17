@@ -8,7 +8,7 @@ namespace HW_2
         {
             try
             {
-                Console.WriteLine(MaximumNumberOfUnequalConsecutiveCharactersInString(args[0]));
+                Console.WriteLine(MaximumNumberOfUnequalConsecutiveCharactersInStringVersionTwo(args[0]));
             }
             catch (Exception exception)
             {
@@ -16,24 +16,26 @@ namespace HW_2
             }
         }
 
-        private static int MaximumNumberOfUnequalConsecutiveCharactersInString(string characterSet)
+        private static int MaximumNumberOfUnequalConsecutiveCharactersInStringVersionTwo(string characterSet)
         {
             if (string.IsNullOrEmpty(characterSet))
             {
                 return 0;
             }
 
-            int result = 1, count = 1;
+            int result = 1, count = 1, startIndex = 0, repeatingElementIndex;
 
-            for (int i = 0; i < characterSet.Length - 1; i++)
+            while (startIndex + count < characterSet.Length - 1)
             {
-                if (characterSet[i].CompareTo(characterSet[i + 1]) != 0)
+                repeatingElementIndex = StringContains(characterSet, characterSet[startIndex + count], startIndex, startIndex + count);
+
+                if (repeatingElementIndex < 0)
                 {
                     count++;
                 }
-
                 else
                 {
+                    startIndex = repeatingElementIndex + 1;
                     result = count > result ? count : result;
                     count = 1;
                 }
@@ -41,5 +43,19 @@ namespace HW_2
 
             return count > result ? count : result;
         }
+
+        private static int StringContains(string line, char symbol, int startIndex, int endIndex)
+        {
+            for (int i = startIndex; i < endIndex; i++)
+            {
+                if (symbol.CompareTo(line[i]) == 0)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
     }
 }
