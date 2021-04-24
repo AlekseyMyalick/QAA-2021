@@ -17,7 +17,6 @@ namespace HW_3
 
         public override void GetFullinfo()
         {
-            Console.WriteLine("\nType: " + typeof(Truck).Name);
             base.GetFullinfo();
             Console.WriteLine("Carrying capacity: " + CarryingCapacity);
         }

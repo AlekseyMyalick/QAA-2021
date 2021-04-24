@@ -14,7 +14,6 @@ namespace HW_3
 
         public override void GetFullinfo()
         {
-            Console.WriteLine("\nType: " + typeof(Car).Name);
             base.GetFullinfo();
             Console.WriteLine("Engine type: " + EngineType);
         }
