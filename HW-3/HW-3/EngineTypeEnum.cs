@@ -1,6 +1,6 @@
 ﻿namespace HW_3
 {
-    enum EngineType
+    public enum EngineTypeEnum
     {
         Gasoline,
         Diesel,

@@ -9,7 +9,7 @@ namespace HW_3
         /// </summary>
         public double CarryingCapacity { get; set; }
 
-        public Truck (double engineVolume, string transmissionType, int maximumSpeed, double carryingCapacity)
+        public Truck (double engineVolume, TransmissionTypeEnum transmissionType, int maximumSpeed, double carryingCapacity)
             : base(engineVolume, transmissionType, maximumSpeed)
         {
             CarryingCapacity = carryingCapacity;

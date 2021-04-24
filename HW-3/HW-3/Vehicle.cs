@@ -9,14 +9,14 @@ namespace HW_3
         /// </summary>
         public double EngineVolume { get; set; }
 
-        public string TransmissionType { get; set; }
+        public TransmissionTypeEnum TransmissionType { get; set; }
 
         /// <summary>
         /// Maximum speed, which is measured in kilometers per hour.
         /// </summary>
         public int MaximumSpeed { get; set; }
 
-        public Vehicle (double engineVolume, string transmissionType, int maximumSpeed)
+        public Vehicle (double engineVolume, TransmissionTypeEnum transmissionType, int maximumSpeed)
         {
             EngineVolume = engineVolume;
             TransmissionType = transmissionType;

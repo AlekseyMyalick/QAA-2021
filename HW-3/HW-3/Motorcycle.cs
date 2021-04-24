@@ -6,7 +6,7 @@ namespace HW_3
     {
         public int NumberOfSeats { get; set; }
 
-        public Motorcycle(double engineVolume, string transmissionType, int maximumSpeed, int numberOfSeats) 
+        public Motorcycle(double engineVolume, TransmissionTypeEnum transmissionType, int maximumSpeed, int numberOfSeats) 
             : base(engineVolume, transmissionType, maximumSpeed)
         {
             NumberOfSeats = numberOfSeats;

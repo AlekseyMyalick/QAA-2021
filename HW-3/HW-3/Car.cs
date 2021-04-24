@@ -4,9 +4,9 @@ namespace HW_3
 {
     public class Car : Vehicle
     {
-        public string EngineType { get; set; }
+        public EngineTypeEnum EngineType { get; set; }
 
-        public Car (double engineVolume, string transmissionType, int maximumSpeed, string engineType)
+        public Car (double engineVolume, TransmissionTypeEnum transmissionType, int maximumSpeed, EngineTypeEnum engineType)
             : base(engineVolume, transmissionType, maximumSpeed)
         {
             EngineType = engineType;

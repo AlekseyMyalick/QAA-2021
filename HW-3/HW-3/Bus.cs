@@ -6,7 +6,7 @@ namespace HW_3
     {
         public int NumberOfDoors { get; set; }
 
-        public Bus(double engineVolume, string transmissionType, int maximumSpeed, int numberOfDoors)
+        public Bus(double engineVolume, TransmissionTypeEnum transmissionType, int maximumSpeed, int numberOfDoors)
             : base(engineVolume, transmissionType, maximumSpeed)
         {
             NumberOfDoors = numberOfDoors;
