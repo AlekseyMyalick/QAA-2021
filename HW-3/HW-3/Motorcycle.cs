@@ -14,6 +14,7 @@ namespace HW_3
 
         public override void GetFullinfo()
         {
+            Console.WriteLine("\nType: " + typeof(Motorcycle).Name);
             base.GetFullinfo();
             Console.WriteLine("Number of seats: " + NumberOfSeats);
         }

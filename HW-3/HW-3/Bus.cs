@@ -14,6 +14,7 @@ namespace HW_3
 
         public override void GetFullinfo()
         {
+            Console.WriteLine("\nType: " + typeof(Bus).Name);
             base.GetFullinfo();
             Console.WriteLine("Number of doors: " + NumberOfDoors);
         }
