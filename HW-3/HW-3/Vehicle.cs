@@ -23,7 +23,7 @@ namespace HW_3
             MaximumSpeed = maximumSpeed;
         }
 
-        public void Display()
+        public virtual void GetFullinfo()
         {
             Console.WriteLine("\nEngine volume: " + EngineVolume + "l" +
                               "\nTransmission type: " + TransmissionType +
