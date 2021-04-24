@@ -25,9 +25,9 @@ namespace HW_3
 
         public virtual void GetFullinfo()
         {
-            Console.WriteLine("\nEngine volume: " + EngineVolume + "l" +
-                              "\nTransmission type: " + TransmissionType +
-                              "\nMaximum speed: " + MaximumSpeed + "km/h");
+            Console.WriteLine("Engine volume: " + EngineVolume + "l" +
+                              "Transmission type: " + TransmissionType +
+                              "Maximum speed: " + MaximumSpeed + "km/h");
         }
     }
 }

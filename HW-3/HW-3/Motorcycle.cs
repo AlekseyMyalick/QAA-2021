@@ -15,7 +15,7 @@ namespace HW_3
         public override void GetFullinfo()
         {
             base.GetFullinfo();
-            Console.WriteLine("\nNumber of seats: " + NumberOfSeats);
+            Console.WriteLine("Number of seats: " + NumberOfSeats);
         }
     }
 }

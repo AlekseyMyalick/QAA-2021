@@ -15,7 +15,7 @@ namespace HW_3
         public override void GetFullinfo()
         {
             base.GetFullinfo();
-            Console.WriteLine("\nEngine type: " + EngineType);
+            Console.WriteLine("Engine type: " + EngineType);
         }
     }
 }
