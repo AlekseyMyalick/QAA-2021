@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace HW_Triangle
+﻿namespace HW_Triangle.Triangles
 {
     class RightTriangle : Triangle, IFillable
     {
@@ -9,13 +7,7 @@ namespace HW_Triangle
         public RightTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
             : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public string Color
-        {
-            get
-            {
-                return _color;
-            }
-        }
+        public string Color => _color;
 
         public override double CalculateArea()
         {
@@ -42,4 +34,5 @@ namespace HW_Triangle
                 b = secondSide;
             }
         }
+    }
 }

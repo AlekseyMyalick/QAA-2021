@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace HW_Triangle
+namespace HW_Triangle.Triangles
 {
-    public class Triangle
+    public abstract class Triangle
     {
         protected double firstSide;
         protected double secondSide;
@@ -40,11 +40,6 @@ namespace HW_Triangle
                    thirdSide + firstSide > secondSide;
         }
 
-        public virtual double CalculateArea()
-        {
-            double P = (firstSide + secondSide + thirdSide) / 2;
-
-            return Math.Sqrt(P * (P - firstSide) * (P - secondSide) * (P - thirdSide));
-        }
+        public abstract double CalculateArea();
     }
 }

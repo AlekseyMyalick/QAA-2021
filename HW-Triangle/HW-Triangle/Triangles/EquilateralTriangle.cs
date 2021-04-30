@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HW_Triangle
+namespace HW_Triangle.Triangles
 {
     class EquilateralTriangle : Triangle, IFillable
     {
@@ -9,13 +9,7 @@ namespace HW_Triangle
         public EquilateralTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
             : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public string Color
-        {
-            get
-            {
-                return _color;
-            }
-        }
+        public string Color => _color;
 
         public override double CalculateArea()
         {

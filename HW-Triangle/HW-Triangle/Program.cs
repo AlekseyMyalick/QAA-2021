@@ -6,10 +6,18 @@ namespace HW_Triangle
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 1);
-            Point p2 = new Point(10, 10);
+            RightTriangle rightTriangle = new RightTriangle(new Point(2, 1), new Point(2, 5), new Point(4, 1));
+            EquilateralTriangle equilateralTriangle = new EquilateralTriangle(new Point(1, 1), new Point(5, 9), new Point(9, 1));
+            IsoscelesTriangle isoscelesTriangle = new IsoscelesTriangle(new Point(1, 1), new Point(3, 5), new Point(5, 1));
+            ArbitraryTriangle triangle = new ArbitraryTriangle(new Point(1, 1), new Point(2, 4), new Point(6, 1));
 
-            Console.WriteLine(Point.Distance(p1, p2));
+            IFillable[] triangles = new IFillable[] { rightTriangle, equilateralTriangle, isoscelesTriangle, triangle };
+
+            foreach (IFillable item in triangles)
+            {
+                Console.WriteLine("Color = " + item.Color);
+                Console.WriteLine("");
+            }
         }
     }
 }

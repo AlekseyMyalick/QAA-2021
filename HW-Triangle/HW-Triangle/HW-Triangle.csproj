@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArbitraryTriangle.cs" />
     <Compile Include="EquilateralTriangle.cs" />
     <Compile Include="IFillable.cs" />
     <Compile Include="IsoscelesTriangle.cs" />
