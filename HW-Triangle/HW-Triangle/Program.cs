@@ -1,0 +1,29 @@
+﻿using HW_Triangle.TriangleBulders;
+using System;
+
+namespace HW_Triangle
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                RightTriangleBuilder rightTriangleBuilder = new RightTriangleBuilder();
+                EquilateralTriangleBuilder equilateralTriangleBuilder = new EquilateralTriangleBuilder();
+                IsoscelesTriangleBuilder isoscelesTriangleBuilder = new IsoscelesTriangleBuilder();
+                ArbitraryTriangleBuilder arbitraryTriangleBuilder = new ArbitraryTriangleBuilder();
+
+                rightTriangleBuilder.Successor = equilateralTriangleBuilder;
+                equilateralTriangleBuilder.Successor = isoscelesTriangleBuilder;
+                isoscelesTriangleBuilder.Successor = arbitraryTriangleBuilder;
+
+                rightTriangleBuilder.TriangleBulderRequest(new Point(1, 1), new Point(2, 4), new Point(6, 1));
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+}
