@@ -1,15 +1,15 @@
 ﻿namespace HW_Triangle.Triangles
 {
-    class RightTriangle : Triangle, IFillable
+    class RightTriangle : Triangle, IFillable, ICalculatedArea
     {
         private const string _color = "Green";
 
         public RightTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
             : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public new string Color => _color;
+        public string Color => _color;
 
-        public override double CalculateArea()
+        public double CalculateArea()
         {
             HypotenuseSearch(out double a, out double b);
 

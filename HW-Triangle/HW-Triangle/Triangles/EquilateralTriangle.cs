@@ -2,16 +2,16 @@
 
 namespace HW_Triangle.Triangles
 {
-    class EquilateralTriangle : Triangle, IFillable
+    class EquilateralTriangle : Triangle, IFillable, ICalculatedArea
     {
         private const string _color = "Red";
 
         public EquilateralTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
             : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public new string Color => _color;
+        public string Color => _color;
 
-        public override double CalculateArea()
+        public double CalculateArea()
         {
             return (FirstSide * FirstSide * Math.Sqrt(3)) / 4;
         }

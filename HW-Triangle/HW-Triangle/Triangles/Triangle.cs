@@ -2,7 +2,7 @@
 
 namespace HW_Triangle.Triangles
 {
-    public abstract class Triangle : IFillable
+    public abstract class Triangle
     {
         public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint)
         {
@@ -30,8 +30,6 @@ namespace HW_Triangle.Triangles
 
         public double ThirdSide { get; private set; }
 
-        public string Color { get; }
-
         public void InitializingTheSides()
         {
             FirstSide = Point.Distance(FirstPoint, SecondPoint);
@@ -45,7 +43,5 @@ namespace HW_Triangle.Triangles
                    SecondSide + ThirdSide > FirstSide ||
                    ThirdSide + FirstSide > SecondSide;
         }
-
-        public abstract double CalculateArea();
     }
 }

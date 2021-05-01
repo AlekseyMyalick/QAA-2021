@@ -2,15 +2,15 @@
 
 namespace HW_Triangle.Triangles
 {
-    class ArbitraryTriangle : Triangle, IFillable
+    class ArbitraryTriangle : Triangle, IFillable, ICalculatedArea
     {
         private const string _color = "White";
         public ArbitraryTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
                     : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public new string Color => _color;
+        public string Color => _color;
 
-        public override double CalculateArea()
+        public double CalculateArea()
         {
             double P = (FirstSide + SecondSide + ThirdSide) / 2;
 

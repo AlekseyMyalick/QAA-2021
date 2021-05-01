@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICalculatedArea.cs" />
     <Compile Include="TriangleBulders\EquilateralTriangleBuilder.cs" />
     <Compile Include="Triangles\ArbitraryTriangle.cs" />
     <Compile Include="TriangleBulders\ArbitraryTriangleBuilder.cs" />
