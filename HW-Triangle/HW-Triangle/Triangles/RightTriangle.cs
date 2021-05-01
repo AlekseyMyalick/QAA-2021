@@ -7,7 +7,7 @@
         public RightTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
             : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public string Color => _color;
+        public new string Color => _color;
 
         public override double CalculateArea()
         {
@@ -18,21 +18,32 @@
 
         private void HypotenuseSearch(out double a, out double b)
         {
-            if (firstSide > secondSide && firstSide > thirdSide)
+            if (FirstSide > SecondSide && FirstSide > ThirdSide)
             {
-                a = secondSide;
-                b = thirdSide;
+                a = SecondSide;
+                b = ThirdSide;
             }
-            else if (secondSide > firstSide && secondSide > thirdSide)
+            else if (SecondSide > FirstSide && SecondSide > ThirdSide)
             {
-                a = firstSide;
-                b = thirdSide;
+                a = FirstSide;
+                b = ThirdSide;
             }
             else
             {
-                a = firstSide;
-                b = secondSide;
+                a = FirstSide;
+                b = SecondSide;
             }
+        }
+
+        public static bool IsThereRightTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
+        {
+            double firstSide = Point.Distance(firstPoint, secondPoint);
+            double secondSide = Point.Distance(firstPoint, thirdPoint);
+            double thirdSide = Point.Distance(secondPoint, thirdPoint);
+
+            return firstSide * firstSide + secondSide * secondSide == thirdSide * thirdSide ||
+                   firstSide * firstSide + thirdSide * thirdSide == secondSide * secondSide ||
+                   thirdSide * thirdSide + secondSide * secondSide == firstSide * firstSide;
         }
     }
 }

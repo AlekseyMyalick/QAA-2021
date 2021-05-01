@@ -9,7 +9,7 @@ namespace HW_Triangle.Triangles
         public IsoscelesTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
             : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public string Color => _color;
+        public new string Color => _color;
 
         public override double CalculateArea()
         {
@@ -20,21 +20,32 @@ namespace HW_Triangle.Triangles
 
         private void SearchForEqualSides(out double a, out double b)
         {
-            if (firstSide == secondSide)
+            if (FirstSide == SecondSide)
             {
-                a = firstSide;
-                b = thirdSide;
+                a = FirstSide;
+                b = ThirdSide;
             }
-            else if (secondSide == thirdSide)
+            else if (SecondSide == ThirdSide)
             {
-                a = secondSide;
-                b = firstSide;
+                a = SecondSide;
+                b = FirstSide;
             }
             else
             {
-                a = firstSide;
-                b = secondSide;
+                a = FirstSide;
+                b = SecondSide;
             }
+        }
+
+        public static bool IsThereIsoscelesTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
+        {
+            double firstSide = Point.Distance(firstPoint, secondPoint);
+            double secondSide = Point.Distance(firstPoint, thirdPoint);
+            double thirdSide = Point.Distance(secondPoint, thirdPoint);
+
+            return firstSide == secondSide ||
+                   secondSide == thirdSide ||
+                   firstSide == thirdSide;
         }
     }
 }

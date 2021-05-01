@@ -8,5 +8,21 @@ namespace HW_Triangle.TriangleBulders
         {
             return new IsoscelesTriangle(firstPoint, secondPoint, thirdPoint);
         }
+
+        public override Triangle TriangleBulderRequest(Point firstPoint, Point secondPoint, Point thirdPoint)
+        {
+            if (IsoscelesTriangle.IsThereIsoscelesTriangle(firstPoint, secondPoint, thirdPoint))
+            {
+                return Build(firstPoint, secondPoint, thirdPoint);
+            }
+            else if (Successor != null)
+            {
+                return Successor.TriangleBulderRequest(firstPoint, secondPoint, thirdPoint);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

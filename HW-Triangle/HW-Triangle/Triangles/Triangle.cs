@@ -2,12 +2,8 @@
 
 namespace HW_Triangle.Triangles
 {
-    public abstract class Triangle
+    public abstract class Triangle : IFillable
     {
-        protected double firstSide;
-        protected double secondSide;
-        protected double thirdSide;
-
         public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint)
         {
             FirstPoint = firstPoint;
@@ -23,21 +19,31 @@ namespace HW_Triangle.Triangles
         }
 
         public Point FirstPoint { get; }
+
         public Point SecondPoint { get; }
+
         public Point ThirdPoint { get; }
 
-        private void InitializingTheSides()
+        public double FirstSide { get; private set; }
+
+        public double SecondSide { get; private set; }
+
+        public double ThirdSide { get; private set; }
+
+        public string Color { get; }
+
+        public void InitializingTheSides()
         {
-            firstSide = Point.Distance(FirstPoint, SecondPoint);
-            secondSide = Point.Distance(FirstPoint, ThirdPoint);
-            thirdSide = Point.Distance(SecondPoint, ThirdPoint);
+            FirstSide = Point.Distance(FirstPoint, SecondPoint);
+            SecondSide = Point.Distance(FirstPoint, ThirdPoint);
+            ThirdSide = Point.Distance(SecondPoint, ThirdPoint);
         }
 
         private bool IsThereATriangle()
         {
-            return firstSide + secondSide > thirdSide &&
-                   secondSide + thirdSide > firstSide &&
-                   thirdSide + firstSide > secondSide;
+            return FirstSide + SecondSide > ThirdSide ||
+                   SecondSide + ThirdSide > FirstSide ||
+                   ThirdSide + FirstSide > SecondSide;
         }
 
         public abstract double CalculateArea();

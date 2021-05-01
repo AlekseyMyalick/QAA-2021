@@ -8,13 +8,24 @@ namespace HW_Triangle.Triangles
         public ArbitraryTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
                     : base(firstPoint, secondPoint, thirdPoint) { }
 
-        public string Color => _color;
+        public new string Color => _color;
 
         public override double CalculateArea()
         {
-            double P = (firstSide + secondSide + thirdSide) / 2;
+            double P = (FirstSide + SecondSide + ThirdSide) / 2;
 
-            return Math.Sqrt(P * (P - firstSide) * (P - secondSide) * (P - thirdSide));
+            return Math.Sqrt(P * (P - FirstSide) * (P - SecondSide) * (P - ThirdSide));
+        }
+
+        public static bool IsThereArbitraryTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
+        {
+            double firstSide = Point.Distance(firstPoint, secondPoint);
+            double secondSide = Point.Distance(firstPoint, thirdPoint);
+            double thirdSide = Point.Distance(secondPoint, thirdPoint);
+
+            return firstSide + secondSide > thirdSide ||
+                   secondSide + thirdSide > firstSide ||
+                   thirdSide + firstSide > secondSide;
         }
     }
 }
