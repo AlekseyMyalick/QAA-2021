@@ -18,7 +18,7 @@ namespace HW_Triangle
                 equilateralTriangleBuilder.Successor = isoscelesTriangleBuilder;
                 isoscelesTriangleBuilder.Successor = arbitraryTriangleBuilder;
 
-                rightTriangleBuilder.TriangleBulderRequest(new Point(1, 1), new Point(2, 4), new Point(6, 1));
+                Console.WriteLine(rightTriangleBuilder.Build(new Point(1, 1), new Point(2, 4), new Point(6, 1)).Color);
             }
             catch (ArgumentException e)
             {

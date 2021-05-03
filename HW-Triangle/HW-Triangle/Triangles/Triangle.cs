@@ -4,17 +4,16 @@ namespace HW_Triangle.Triangles
 {
     public abstract class Triangle
     {
-        public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint)
+        public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint, Color color)
         {
             FirstPoint = firstPoint;
             SecondPoint = secondPoint;
             ThirdPoint = thirdPoint;
-
-            InitializingTheSides();
+            Color = color;
 
             if (!IsThereATriangle())
             {
-                throw new ArgumentException("A triangle with such sides cannot be created.");
+                throw new ArgumentException("A triangle with such sides cannot be created.", typeof(Triangle).Name);
             }
         }
 
@@ -24,24 +23,26 @@ namespace HW_Triangle.Triangles
 
         public Point ThirdPoint { get; }
 
-        public double FirstSide { get; private set; }
+        public Color Color { get; }
 
-        public double SecondSide { get; private set; }
-
-        public double ThirdSide { get; private set; }
-
-        public void InitializingTheSides()
+        public double CalculateArea()
         {
-            FirstSide = Point.Distance(FirstPoint, SecondPoint);
-            SecondSide = Point.Distance(FirstPoint, ThirdPoint);
-            ThirdSide = Point.Distance(SecondPoint, ThirdPoint);
+            return Math.Abs(FirstPoint.X * (SecondPoint.Y - ThirdPoint.Y) + 
+                            SecondPoint.X * (ThirdPoint.Y - FirstPoint.Y) + 
+                            ThirdPoint.X * (FirstPoint.Y - SecondPoint.Y)) / 2;
+        }
+
+        public virtual void InitializingTheSides(out double firstSide, out double secondSide, out double thirdSide)
+        {
+            firstSide = Point.Distance(FirstPoint, SecondPoint);
+            secondSide = Point.Distance(FirstPoint, ThirdPoint);
+            thirdSide = Point.Distance(SecondPoint, ThirdPoint);
         }
 
         private bool IsThereATriangle()
         {
-            return FirstSide + SecondSide > ThirdSide ||
-                   SecondSide + ThirdSide > FirstSide ||
-                   ThirdSide + FirstSide > SecondSide;
+            return CalculateArea() != 0;
         }
+
     }
 }

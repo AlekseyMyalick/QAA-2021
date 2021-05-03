@@ -43,12 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICalculatedArea.cs" />
+    <Compile Include="Color.cs" />
     <Compile Include="TriangleBulders\EquilateralTriangleBuilder.cs" />
     <Compile Include="Triangles\ArbitraryTriangle.cs" />
     <Compile Include="TriangleBulders\ArbitraryTriangleBuilder.cs" />
     <Compile Include="Triangles\EquilateralTriangle.cs" />
-    <Compile Include="IFillable.cs" />
     <Compile Include="Triangles\IsoscelesTriangle.cs" />
     <Compile Include="TriangleBulders\IsoscelesTriangleBuilder.cs" />
     <Compile Include="Point.cs" />
@@ -57,7 +56,7 @@
     <Compile Include="Triangles\RightTriangle.cs" />
     <Compile Include="TriangleBulders\RightTriangleBuilder.cs" />
     <Compile Include="Triangles\Triangle.cs" />
-    <Compile Include="TriangleBulders\TriangleBulder.cs" />
+    <Compile Include="TriangleBulders\TriangleBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

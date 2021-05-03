@@ -1,27 +1,24 @@
-﻿using HW_Triangle.Triangles;
+﻿using System;
+using HW_Triangle.Triangles;
 
 namespace HW_Triangle.TriangleBulders
 {
-    class ArbitraryTriangleBuilder : TriangleBulder
+    class ArbitraryTriangleBuilder : TriangleBuilder
     {
         public override Triangle Build(Point firstPoint, Point secondPoint, Point thirdPoint)
         {
-            return new ArbitraryTriangle(firstPoint, secondPoint, thirdPoint);
-        }
+            try
+            {
+                return new ArbitraryTriangle(firstPoint, secondPoint, thirdPoint, Color.White);
+            }
+            catch (ArgumentException e)
+            {
+                if (e.ParamName == typeof(Triangle).Name)
+                {
+                    return null;
+                }
 
-        public override Triangle TriangleBulderRequest(Point firstPoint, Point secondPoint, Point thirdPoint)
-        {
-            if (ArbitraryTriangle.IsThereArbitraryTriangle(firstPoint, secondPoint, thirdPoint))
-            {
-                return Build(firstPoint, secondPoint, thirdPoint);
-            }
-            else if (Successor != null)
-            {
-                return Successor.TriangleBulderRequest(firstPoint, secondPoint, thirdPoint);
-            }
-            else
-            {
-                return null;
+                return Successor.Build(firstPoint, secondPoint, thirdPoint);
             }
         }
     }

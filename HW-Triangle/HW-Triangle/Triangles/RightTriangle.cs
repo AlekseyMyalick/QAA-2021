@@ -1,49 +1,25 @@
-﻿namespace HW_Triangle.Triangles
+﻿using System;
+
+namespace HW_Triangle.Triangles
 {
-    class RightTriangle : Triangle, IFillable, ICalculatedArea
+    class RightTriangle : Triangle
     {
-        private const string _color = "Green";
-
-        public RightTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
-            : base(firstPoint, secondPoint, thirdPoint) { }
-
-        public string Color => _color;
-
-        public double CalculateArea()
+        public RightTriangle(Point firstPoint, Point secondPoint, Point thirdPoint, Color color)
+            : base(firstPoint, secondPoint, thirdPoint, color)
         {
-            HypotenuseSearch(out double a, out double b);
-
-            return a * b / 2;
-        }
-
-        private void HypotenuseSearch(out double a, out double b)
-        {
-            if (FirstSide > SecondSide && FirstSide > ThirdSide)
+            if (!IsThereRightTriangle())
             {
-                a = SecondSide;
-                b = ThirdSide;
-            }
-            else if (SecondSide > FirstSide && SecondSide > ThirdSide)
-            {
-                a = FirstSide;
-                b = ThirdSide;
-            }
-            else
-            {
-                a = FirstSide;
-                b = SecondSide;
+                throw new ArgumentException("Right triangle cannot be created");
             }
         }
 
-        public static bool IsThereRightTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
+        public bool IsThereRightTriangle()
         {
-            double firstSide = Point.Distance(firstPoint, secondPoint);
-            double secondSide = Point.Distance(firstPoint, thirdPoint);
-            double thirdSide = Point.Distance(secondPoint, thirdPoint);
+            base.InitializingTheSides(out double firstSide, out double secondSide, out double thirdSide);
 
-            return firstSide * firstSide + secondSide * secondSide == thirdSide * thirdSide ||
-                   firstSide * firstSide + thirdSide * thirdSide == secondSide * secondSide ||
-                   thirdSide * thirdSide + secondSide * secondSide == firstSide * firstSide;
+            return (thirdSide * thirdSide).CompareTo(firstSide * firstSide + secondSide * secondSide) == 0 ||
+                   (secondSide * secondSide).CompareTo(firstSide * firstSide + thirdSide * thirdSide) == 0 ||
+                   (firstSide * firstSide).CompareTo(thirdSide * thirdSide + secondSide * secondSide) == 0;
         }
     }
 }

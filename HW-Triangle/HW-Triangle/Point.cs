@@ -46,7 +46,7 @@ namespace HW_Triangle
 
         private void CheckingCoordinates(int coordinate)
         {
-            if (coordinate < 0 || coordinate > int.MaxValue)
+            if (coordinate < 0)
             {
                 throw new ArgumentOutOfRangeException();
             }

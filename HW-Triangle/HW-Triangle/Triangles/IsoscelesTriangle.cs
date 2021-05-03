@@ -2,50 +2,24 @@
 
 namespace HW_Triangle.Triangles
 {
-    class IsoscelesTriangle : Triangle, IFillable, ICalculatedArea
+    class IsoscelesTriangle : Triangle
     {
-        private const string _color = "Blue";
-
-        public IsoscelesTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
-            : base(firstPoint, secondPoint, thirdPoint) { }
-
-        public string Color => _color;
-
-        public double CalculateArea()
+        public IsoscelesTriangle(Point firstPoint, Point secondPoint, Point thirdPoint, Color color)
+            : base(firstPoint, secondPoint, thirdPoint, color)
         {
-            SearchForEqualSides(out double a, out double b);
-
-            return b * Math.Sqrt((a * a) - (b * b / 4)) / 2;
-        }
-
-        private void SearchForEqualSides(out double a, out double b)
-        {
-            if (FirstSide == SecondSide)
+            if (!IsThereIsoscelesTriangle())
             {
-                a = FirstSide;
-                b = ThirdSide;
-            }
-            else if (SecondSide == ThirdSide)
-            {
-                a = SecondSide;
-                b = FirstSide;
-            }
-            else
-            {
-                a = FirstSide;
-                b = SecondSide;
+                throw new ArgumentException("Isosceles triangle cannot be created");
             }
         }
 
-        public static bool IsThereIsoscelesTriangle(Point firstPoint, Point secondPoint, Point thirdPoint)
+        public bool IsThereIsoscelesTriangle()
         {
-            double firstSide = Point.Distance(firstPoint, secondPoint);
-            double secondSide = Point.Distance(firstPoint, thirdPoint);
-            double thirdSide = Point.Distance(secondPoint, thirdPoint);
+            base.InitializingTheSides(out double firstSide, out double secondSide, out double thirdSide);
 
-            return firstSide == secondSide ||
-                   secondSide == thirdSide ||
-                   firstSide == thirdSide;
+            return firstSide.CompareTo(secondSide) == 0 ||
+                   secondSide.CompareTo(thirdSide) == 0 ||
+                   firstSide.CompareTo(thirdSide) == 0;
         }
     }
 }
