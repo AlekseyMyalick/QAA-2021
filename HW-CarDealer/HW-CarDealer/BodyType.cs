@@ -1,6 +1,6 @@
 ﻿namespace HW_CarDealer
 {
-    enum BodyType
+    public enum BodyType
     {
         Sedan,
         Hatchback,

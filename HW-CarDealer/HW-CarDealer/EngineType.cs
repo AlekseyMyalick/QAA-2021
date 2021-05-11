@@ -1,6 +1,6 @@
 ﻿namespace HW_CarDealer
 {
-    enum EngineType
+    public enum EngineType
     {
         Gasoline,
         Diesel,

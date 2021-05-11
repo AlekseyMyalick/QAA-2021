@@ -1,6 +1,6 @@
 ﻿namespace HW_CarDealer
 {
-    enum Make
+    public enum Make
     {
         Renault,
         Volvo,
