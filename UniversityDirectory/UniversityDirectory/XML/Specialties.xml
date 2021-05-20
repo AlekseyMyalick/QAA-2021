@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<specialties>
+  <specialty>
+    <name>"Radiophysics"</name>
+    <faculties>
+      <faculty>
+        <id>1</id>
+      </faculty>
+    </faculties>
+    <id>1</id>
+  </specialty>
+</specialties>

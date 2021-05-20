@@ -44,12 +44,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Department.cs" />
+    <Compile Include="Departments\Administration.cs" />
+    <Compile Include="Departments\Faculty.cs" />
+    <Compile Include="Departments\Household.cs" />
+    <Compile Include="Departments\ResearchInstitutes.cs" />
+    <Compile Include="Departments\Security.cs" />
+    <Compile Include="Enums\Faculties.cs" />
+    <Compile Include="Enums\GuardedTerritory.cs" />
+    <Compile Include="Enums\Specialties.cs" />
+    <Compile Include="Enums\Subjects.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Persons\Professor.cs" />
+    <Compile Include="Persons\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specialty.cs" />
+    <Compile Include="Subject.cs" />
+    <Compile Include="University.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XML\Professors.xml" />
+    <Content Include="XML\Specialties.xml" />
+    <Content Include="XML\Students.xml" />
+    <Content Include="XML\Subjects.xml" />
+    <Content Include="XML\Universities.xml" />
+    <Content Include="XML\Faculties.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

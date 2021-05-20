@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<subjects>
+  <subject>
+    <name>"Microwave"</name>
+    <id>1</id>
+    <specialties>
+      <specialty>
+        <id>1</id>
+      </specialty>
+    </specialties>
+  </subject>
+  <subject>
+    <name>"OscillationTheory"</name>
+    <id>2</id>
+    <specialties>
+      <specialty>
+        <id>1</id>
+      </specialty>
+    </specialties>
+  </subject>
+</subjects>

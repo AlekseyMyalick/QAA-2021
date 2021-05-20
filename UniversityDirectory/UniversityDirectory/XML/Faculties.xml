@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<faculties>
+  <faculty>
+    <name>"RadiophysicsAndComputerTechnologies"</name>
+    <leader>
+      <professor>
+        <id>1</id>
+      </professor>
+    </leader>
+    <staff>
+      <professor>
+        <id>2</id>
+      </professor>
+      <professor>
+        <id>3</id>
+      </professor>
+    </staff>
+    <universities>
+      <university>
+        <id>1</id>
+      </university>
+    </universities>
+    <id>1</id>
+  </faculty>
+</faculties>

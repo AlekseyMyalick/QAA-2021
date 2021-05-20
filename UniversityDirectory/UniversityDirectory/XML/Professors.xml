@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<professors>
+  <professor>
+    <firstName>"Sergey"</firstName>
+    <lastName>"Maly"</lastName>
+    <age>54</age>
+    <id>1</id>
+    <subjects>
+      <subject>
+        <id>1</id>
+      </subject>
+    </subjects>
+  </professor>
+  <professor>
+    <firstName>"Valery"</firstName>
+    <lastName>"Demidchik"</lastName>
+    <age>70</age>
+    <id>2</id>
+    <subjects>
+      <subject>
+        <id>2</id>
+      </subject>
+    </subjects>
+  </professor>
+  <professor>
+    <firstName>"Anton"</firstName>
+    <lastName>"Rudnitsky"</lastName>
+    <age>69</age>
+    <id>3</id>
+    <subjects>
+      <subject>
+        <id>1</id>
+      </subject>
+    </subjects>
+  </professor>
+</professors>

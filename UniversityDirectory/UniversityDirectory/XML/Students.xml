@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<students>
+  <student>
+    <firstName>"Alexey"</firstName>
+    <lastName>"Myalik"</lastName>
+    <age>20</age>
+    <id>1</id>
+    <specialties>
+      <specialty>
+        <id>1</id>
+      </specialty>
+    </specialties>
+  </student>
+  <student>
+    <firstName>"Kirill"</firstName>
+    <lastName>"Novik"</lastName>
+    <age>20</age>
+    <id>2</id>
+    <specialties>
+      <specialty>
+        <id>1</id>
+      </specialty>
+    </specialties>
+  </student>
+  <student>
+    <firstName>"Kirill"</firstName>
+    <lastName>"Shklyarevsky"</lastName>
+    <age>20</age>
+    <id>3</id>
+    <specialties>
+      <specialty>
+        <id>1</id>
+      </specialty>
+    </specialties>
+  </student>
+</students>
