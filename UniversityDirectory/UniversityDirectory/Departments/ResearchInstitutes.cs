@@ -6,7 +6,7 @@ namespace UniversityDirectory.Departments
     {
         public string ResearchTopic { get; set; }
 
-        public ResearchInstitutes(Person leader, List<Person> staff, string researchTopic) : base(leader, staff)
+        public ResearchInstitutes(int leaderId, List<int> staffId, string researchTopic) : base(leaderId, staffId)
         {
             ResearchTopic = researchTopic;
         }

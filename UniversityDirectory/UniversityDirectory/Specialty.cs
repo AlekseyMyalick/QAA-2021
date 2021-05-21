@@ -1,27 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UniversityDirectory.Departments;
 using UniversityDirectory.Enums;
 
 namespace UniversityDirectory
 {
-    class Specialty
+    [Serializable]
+    public class Specialty
     {
         public Specialties Name { get; set; }
 
-        public List<Faculty> Faculties { get; set; }
+        public List<int> SubjectsId { get; set; }
 
-        public static int Id = 1;
+        public int Id { get; set; }
 
-        public Specialty (Specialties name, List<Faculty> faculties)
+        public Specialty() 
+        { }
+
+        public Specialty (Specialties name, List<int> subjectsId, int id)
         {
             Name = name;
-            Faculties = faculties;
+            SubjectsId = subjectsId;
+            Id = id;
+        }
 
-            Id++;
+        public override string ToString()
+        {
+            return $"Name: {Name} \nId: {Id} \nSubjects Id: {string.Join(", ", SubjectsId)}\n";
         }
     }
 }

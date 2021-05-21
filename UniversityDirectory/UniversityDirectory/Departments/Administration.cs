@@ -5,7 +5,7 @@ namespace UniversityDirectory.Departments
     class Administration : Department
     {
         public Person ViceRector { get; set; }
-        public Administration (Person leader, List<Person> staff, Person viceRector) : base(leader, staff)
+        public Administration (int leaderId, List<int> staffId, Person viceRector) : base(leaderId, staffId)
         {
             ViceRector = viceRector;
         }

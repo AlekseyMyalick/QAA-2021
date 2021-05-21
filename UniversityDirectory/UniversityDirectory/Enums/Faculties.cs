@@ -1,6 +1,6 @@
 ﻿namespace UniversityDirectory.Enums
 {
-    enum Faculties
+    public enum Faculties
     {
         RadiophysicsAndComputerTechnologies,
         Biology,

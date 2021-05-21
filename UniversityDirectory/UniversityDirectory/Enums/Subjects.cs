@@ -2,7 +2,9 @@
 {
     enum Subjects
     {
+        Microwave,
+        InformationTheory,
         StatisticalRadiophysics,
-        InformationTheory
+        OscillationTheory
     }
 }

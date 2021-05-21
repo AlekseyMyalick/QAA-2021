@@ -1,18 +1,27 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace UniversityDirectory.Persons
 {
-    class Student : Person
+    [Serializable]
+    public class Student : Person
     {
-        public List<Specialty> Specialties { get; set; }
+        public List<int> SpecialtiesId { get; set; }
 
-        public static int Id = 1;
+        public int Id { get; set; }
 
-        public Student(string firstName, string lastName, int age, List<Specialty> specialties) : base(firstName, lastName, age)
+        public Student() 
+        { }
+
+        public Student(string firstName, string lastName, int age, int id, List<int> specialtiesId) : base(firstName, lastName, age)
         {
-            Specialties = specialties;
+            SpecialtiesId = specialtiesId;
+            Id = id;
+        }
 
-            Id++;
+        public override string ToString()
+        {
+            return $"First name: {FirstName} \nLast name: {LastName} \nAge: {Age} \nId: {Id} \nSubjects Id: {string.Join(", ", SpecialtiesId)}\n";
         }
     }
 }

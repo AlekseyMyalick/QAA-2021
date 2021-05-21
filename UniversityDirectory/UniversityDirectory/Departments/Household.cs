@@ -6,7 +6,7 @@ namespace UniversityDirectory.Departments
     {
         public int InventoriesCount { get; set; }
 
-        public Household(Person leader, List<Person> staff, int inventoriesCount) : base(leader, staff)
+        public Household(int leaderId, List<int> staffId, int inventoriesCount) : base(leaderId, staffId)
         {
             InventoriesCount = inventoriesCount;
         }

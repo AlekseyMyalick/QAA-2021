@@ -1,6 +1,6 @@
 ﻿namespace UniversityDirectory.Enums
 {
-    enum Specialties
+    public enum Specialties
     {
         Radiophysics,
         ComputerSecurity,

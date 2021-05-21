@@ -1,24 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UniversityDirectory
 {
-    class University
+    [Serializable]
+    public class University
     {
         public string Name { get; set; }
-        //public List<Department> Departments { get; set; }
 
-        public static int Id = 1;
+        public List<int> DepartmentsId { get; set; }
 
-        public University (string name)//, List<Department> departments)
+        public int Id { get; set; }
+
+        public University() 
+        { }
+
+        public University (string name, int id, List<int> departmentsId)
         {
             Name = name;
-            //Departments = departments;
+            DepartmentsId = departmentsId;
+            Id = id;
+        }
 
-            Id++;
+        public override string ToString()
+        {
+            return $"Departments Id: {string.Join(", ", DepartmentsId)}";
         }
     }
 }

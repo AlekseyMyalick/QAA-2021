@@ -6,7 +6,7 @@ namespace UniversityDirectory.Departments
     {
         public bool IsWorkOnWeekends { get; set; }
 
-        public Security(Person leader, List<Person> staff, bool isWorkOnWeekends) : base(leader, staff)
+        public Security(int leaderId, List<int> staffId, bool isWorkOnWeekends) : base(leaderId, staffId)
         {
             IsWorkOnWeekends = isWorkOnWeekends;
         }

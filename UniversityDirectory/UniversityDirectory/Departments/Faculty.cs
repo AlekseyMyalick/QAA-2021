@@ -1,22 +1,31 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UniversityDirectory.Enums;
 
 namespace UniversityDirectory.Departments
 {
-    class Faculty : Department
+    [Serializable]
+    public class Faculty : Department
     {
         public Faculties Name { get; set; }
 
-        public List<University> Universities { get; set; }
+        public List<int> SpecialtiesId { get; set; }
 
-        public static int Id = 1; 
+        public int Id { get; set; } 
 
-        public Faculty(Faculties name, Person leader, List<Person> staff, List<University> universities) : base(leader, staff)
+        public Faculty () 
+        { }
+
+        public Faculty(Faculties name, int leaderId, List<int> staffId, int id, List<int> specialtiesId) : base(leaderId, staffId)
         {
             Name = name;
-            Universities = universities;
+            Id = id;
+            SpecialtiesId = specialtiesId;
+        }
 
-            Id++;
+        public override string ToString()
+        {
+            return $"Name: {Name} \nLeader Id: {LeaderId} \nStaff Id: {string.Join(", ", StaffId)} \nId: {Id} \nSpecialties Id: {string.Join(", ", SpecialtiesId)}\n";
         }
     }
 }

@@ -1,22 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UniversityDirectory.Persons
 {
-    class Professor : Person
+    [Serializable]
+    public class Professor : Person
     {
-        public List<Subject> Subjects { get; set; }
+        public List<int> SubjectsId { get; set; }
 
-        public static int Id = 1;
+        public int Id { get; set; }
 
-        public Professor (string firstName, string lastName, int age, List<Subject> subjects) : base(firstName, lastName, age)
+        public Professor() 
+        { }
+
+        public Professor (string firstName, string lastName, int age, int id, List<int> subjectsId) : base(firstName, lastName, age)
         {
-            Subjects= subjects;
+            Id = id;
+            SubjectsId = subjectsId;
+        }
 
-            Id++;
+        public override string ToString()
+        {
+            return $"First name: {FirstName} \nLast name: {LastName} \nAge: {Age} \nId: {Id} \nSubjects Id: {string.Join(", ", SubjectsId)}\n";
         }
     }
 }

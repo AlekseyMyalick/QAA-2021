@@ -2,29 +2,19 @@
 
 namespace UniversityDirectory
 {
-    abstract class Department
+    public abstract class Department
     {
-        public Person Leader { get; set; }
+        public int LeaderId { get; set; }
 
-        public List<Person> Staff { get; set; }
+        public List<int> StaffId { get; set; }
 
-        public Department (Person leader, List<Person> staff)
+        public Department () 
+        { }
+
+        public Department (int leaderId, List<int> staffId)
         {
-            Leader = leader;
-            Staff = staff;
-        }
-
-        public Person this[int index]
-        {
-            get
-            {
-                return Staff[index];
-            }
-
-            set
-            {
-                Staff[index] = value;
-            }
+            LeaderId = leaderId;
+            StaffId = staffId;
         }
     }
 }

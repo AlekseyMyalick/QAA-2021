@@ -1,25 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UniversityDirectory
 {
-    class Subject
+    [Serializable]
+    public class Subject
     {
         public string Name { get; set; }
 
-        public List<Specialty> Specialties { get; set; }
+        public int Id { get; set; }
 
-        public static int Id = 1;
+        public Subject()
+        { }
 
-        public Subject (string name, List<Specialty> specialties)
+        public Subject (string name, int id)
         {
             Name = name;
-            Specialties = specialties;
+            Id = id;
+        }
 
-            Id++;
+        public override string ToString()
+        {
+            return $"Name: {Name} \nId: {Id}\n";
         }
     }
 }

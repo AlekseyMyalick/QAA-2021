@@ -1,36 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<students>
-  <student>
-    <firstName>"Alexey"</firstName>
-    <lastName>"Myalik"</lastName>
-    <age>20</age>
-    <id>1</id>
-    <specialties>
-      <specialty>
-        <id>1</id>
-      </specialty>
-    </specialties>
-  </student>
-  <student>
-    <firstName>"Kirill"</firstName>
-    <lastName>"Novik"</lastName>
-    <age>20</age>
-    <id>2</id>
-    <specialties>
-      <specialty>
-        <id>1</id>
-      </specialty>
-    </specialties>
-  </student>
-  <student>
-    <firstName>"Kirill"</firstName>
-    <lastName>"Shklyarevsky"</lastName>
-    <age>20</age>
-    <id>3</id>
-    <specialties>
-      <specialty>
-        <id>1</id>
-      </specialty>
-    </specialties>
-  </student>
-</students>
+﻿<?xml version="1.0"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <FirstName>Alexey</FirstName>
+    <LastName>Myalik</LastName>
+    <Age>20</Age>
+    <SpecialtiesId>
+      <int>1</int>
+    </SpecialtiesId>
+    <Id>1</Id>
+  </Student>
+  <Student>
+    <FirstName>Kirill</FirstName>
+    <LastName>Novik</LastName>
+    <Age>20</Age>
+    <SpecialtiesId>
+      <int>1</int>
+      <int>2</int>
+    </SpecialtiesId>
+    <Id>2</Id>
+  </Student>
+  <Student>
+    <FirstName>Kirill</FirstName>
+    <LastName>Shklyarevsky</LastName>
+    <Age>20</Age>
+    <SpecialtiesId>
+      <int>3</int>
+    </SpecialtiesId>
+    <Id>2</Id>
+  </Student>
+</ArrayOfStudent>

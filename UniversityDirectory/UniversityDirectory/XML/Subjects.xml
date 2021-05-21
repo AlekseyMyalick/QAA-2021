@@ -1,21 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<subjects>
-  <subject>
-    <name>"Microwave"</name>
-    <id>1</id>
-    <specialties>
-      <specialty>
-        <id>1</id>
-      </specialty>
-    </specialties>
-  </subject>
-  <subject>
-    <name>"OscillationTheory"</name>
-    <id>2</id>
-    <specialties>
-      <specialty>
-        <id>1</id>
-      </specialty>
-    </specialties>
-  </subject>
-</subjects>
+﻿<?xml version="1.0"?>
+<ArrayOfSubject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Subject>
+    <Name>Microwave</Name>
+    <Id>1</Id>
+  </Subject>
+  <Subject>
+    <Name>OscillationTheory</Name>
+    <Id>2</Id>
+  </Subject>
+  <Subject>
+    <Name>StatisticalRadiophysics</Name>
+    <Id>3</Id>
+  </Subject>
+</ArrayOfSubject>
