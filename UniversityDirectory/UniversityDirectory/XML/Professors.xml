@@ -15,6 +15,7 @@
     <Age>69</Age>
     <SubjectsId>
       <int>1</int>
+      <int>2</int>
     </SubjectsId>
     <Id>2</Id>
   </Professor>

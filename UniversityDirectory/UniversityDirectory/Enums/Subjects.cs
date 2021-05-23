@@ -1,6 +1,6 @@
 ﻿namespace UniversityDirectory.Enums
 {
-    enum Subjects
+    public enum Subjects
     {
         Microwave,
         InformationTheory,

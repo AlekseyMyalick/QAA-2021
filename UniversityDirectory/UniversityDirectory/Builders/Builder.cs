@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
-using UniversityDirectory.Persons;
 
 namespace UniversityDirectory.Builders
 {
-    class Builder<T>
+    static class Builder<T>
     {
-        public List<T> Build(string path)
+        public static List<T> Build(string path)
         {
             XmlSerializer formatter = new XmlSerializer(typeof(List<T>));
 

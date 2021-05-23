@@ -54,6 +54,7 @@
     <Compile Include="Enums\GuardedTerritory.cs" />
     <Compile Include="Enums\Specialties.cs" />
     <Compile Include="Enums\Subjects.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Persons\Professor.cs" />
     <Compile Include="Persons\Student.cs" />

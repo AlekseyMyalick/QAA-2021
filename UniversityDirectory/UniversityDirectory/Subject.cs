@@ -1,18 +1,19 @@
 ﻿using System;
+using UniversityDirectory.Enums;
 
 namespace UniversityDirectory
 {
     [Serializable]
     public class Subject
     {
-        public string Name { get; set; }
+        public Subjects Name { get; set; }
 
         public int Id { get; set; }
 
         public Subject()
         { }
 
-        public Subject (string name, int id)
+        public Subject (Subjects name, int id)
         {
             Name = name;
             Id = id;
