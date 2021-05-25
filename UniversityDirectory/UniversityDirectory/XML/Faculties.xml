@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<ArrayOfFaculty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Faculty>
+    <LeaderId>1</LeaderId>
+    <StaffId>
+      <int>1</int>
+      <int>2</int>
+      <int>3</int>
+    </StaffId>
+    <Name>RadiophysicsAndComputerTechnologies</Name>
+    <SpecialtiesId>
+      <int>1</int>
+      <int>2</int>
+      <int>3</int>
+    </SpecialtiesId>
+    <Id>1</Id>
+  </Faculty>
+</ArrayOfFaculty>

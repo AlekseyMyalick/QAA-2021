@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <FirstName>Alexey</FirstName>
+    <LastName>Myalik</LastName>
+    <Age>20</Age>
+    <SpecialtiesId>
+      <int>1</int>
+      <int>2</int>
+    </SpecialtiesId>
+    <Id>1</Id>
+  </Student>
+  <Student>
+    <FirstName>Kirill</FirstName>
+    <LastName>Novik</LastName>
+    <Age>20</Age>
+    <SpecialtiesId>
+      <int>1</int>
+      <int>2</int>
+    </SpecialtiesId>
+    <Id>2</Id>
+  </Student>
+  <Student>
+    <FirstName>Kirill</FirstName>
+    <LastName>Shklyarevsky</LastName>
+    <Age>20</Age>
+    <SpecialtiesId>
+      <int>3</int>
+    </SpecialtiesId>
+    <Id>2</Id>
+  </Student>
+</ArrayOfStudent>

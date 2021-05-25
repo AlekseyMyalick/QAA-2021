@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<ArrayOfProfessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Professor>
+    <FirstName>Valery</FirstName>
+    <LastName>Demidchik</LastName>
+    <Age>70</Age>
+    <SubjectsId>
+      <int>2</int>
+    </SubjectsId>
+    <Id>1</Id>
+  </Professor>
+  <Professor>
+    <FirstName>Anton</FirstName>
+    <LastName>Rudnitsky</LastName>
+    <Age>69</Age>
+    <SubjectsId>
+      <int>1</int>
+      <int>2</int>
+    </SubjectsId>
+    <Id>2</Id>
+  </Professor>
+  <Professor>
+    <FirstName>Igor</FirstName>
+    <LastName>Kheidorov</LastName>
+    <Age>46</Age>
+    <SubjectsId>
+      <int>1</int>
+      <int>2</int>
+      <int>3</int>
+    </SubjectsId>
+    <Id>3</Id>
+  </Professor>
+</ArrayOfProfessor>
