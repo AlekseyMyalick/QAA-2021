@@ -48,20 +48,19 @@ namespace UniversityDirectory
             return Students.Where(student => student.SpecialtiesId.Contains(speciltyId.Id)).ToList();   
         }
 
-        //3
-        //public IEnumerable<Student> StudentsTakingSpecificSubject(Subjects specificSubject)
-        //{
-        //    var subjectId = Subjects.SingleOrDefault(subject => subject.Name == specificSubject);
+        public List<Student> StudentsTakingSpecificSubject(Subjects specificSubject)
+        {
+            var subjectId = Subjects.SingleOrDefault(subject => subject.Name == specificSubject);
 
-        //    if (subjectId is null)
-        //    {
-        //        return Enumerable.Empty<Student>();
-        //    }
-        //    else
-        //    {
-        //        return Students.Where(student => student.SpecialtiesId);
-        //    }
-        //}
+            if (subjectId is null)
+            {
+                return new List<Student>();
+            }
+
+            var specialties = Specialties.Where(s => s.SubjectsId.Contains(subjectId.Id));
+
+            return specialties.SelectMany(s => StudentsInSpecificSpecialty(s.Name)).Distinct().ToList();
+        }
 
         public List<Subject> SubjectsThatAreInMoreThanOneSpecialtyOfTheFaculty(Faculties facultyName)
         {

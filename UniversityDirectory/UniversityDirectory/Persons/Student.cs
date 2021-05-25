@@ -21,7 +21,7 @@ namespace UniversityDirectory.Persons
 
         public override string ToString()
         {
-            return $"First name: {FirstName} \nLast name: {LastName} \nAge: {Age} \nId: {Id} \nSubjects Id: {string.Join(", ", SpecialtiesId)}\n";
+            return $"First name: {FirstName} \nLast name: {LastName} \nAge: {Age} \nId: {Id} \nSpecialties Id: {string.Join(", ", SpecialtiesId)}\n";
         }
     }
 }

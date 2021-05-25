@@ -6,6 +6,7 @@
     <Age>20</Age>
     <SpecialtiesId>
       <int>1</int>
+      <int>2</int>
     </SpecialtiesId>
     <Id>1</Id>
   </Student>
